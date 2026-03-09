@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Growth Intelligence Engine</title>
+    <!-- Modern font for premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="glass-background"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-chart-waterfall"></i>
+                <h1>Growth <span>Intelligence Engine</span></h1>
+            </div>
+            <p>End-to-End MLOps Pipeline for Customer Retention & Feedback Analysis</p>
+        </header>
+
+        <main class="glass-card main-interface">
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="churn-tab">
+                    <i class="fa-solid fa-user-minus"></i> Churn Predictor
+                </button>
+                <button class="tab-btn" data-tab="sentiment-tab">
+                    <i class="fa-solid fa-comment-dots"></i> Feedback Analysis
+                </button>
+            </div>
+
+            <!-- CHURN PREDICTOR TAB -->
+            <div id="churn-tab" class="tab-content active">
+                <div class="split-layout">
+                    <!-- Inputs -->
+                    <div class="input-panel">
+                        <h3>Customer SaaS Metrics</h3>
+                        <p class="subtitle">Adjust metrics to simulate a user profile.</p>
+
+                        <div class="slider-group">
+                            <label for="days-login">Days Since Last Login: <span id="days-val">30</span></label>
+                            <input type="range" id="days-login" min="1" max="60" value="30">
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="support-tickets">Open Support Tickets: <span id="tickets-val">2</span></label>
+                            <input type="range" id="support-tickets" min="0" max="10" value="2">
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="monthly-spend">Monthly Spend ($): <span id="spend-val">99</span></label>
+                            <input type="range" id="monthly-spend" min="10" max="500" value="99">
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="feature-adoption">Core Feature Adoption: <span
+                                    id="adoption-val">40%</span></label>
+                            <input type="range" id="feature-adoption" min="0" max="100" value="40">
+                        </div>
+
+                        <button id="predict-churn-btn" class="primary-btn">
+                            <i class="fa-solid fa-brain"></i> Analyze Churn Risk
+                        </button>
+                    </div>
+
+                    <!-- Output -->
+                    <div class="output-panel">
+                        <h3>ML Prediction</h3>
+                        <div id="churn-result" class="result-placeholder">
+                            <i class="fa-solid fa-robot placeholder-icon"></i>
+                            <p>Awaiting data to run Random Forest model...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SENTIMENT ANALYSIS TAB -->
+            <div id="sentiment-tab" class="tab-content hidden">
+                <div class="split-layout">
+                    <!-- Inputs -->
+                    <div class="input-panel">
+                        <h3>Unstructured Feedback</h3>
+                        <p class="subtitle">Paste a customer review or ticket.</p>
+
+                        <textarea id="feedback-input"
+                            placeholder="e.g., The application keeps crashing every time I try to export my data to CSV. Please fix this immediately!"></textarea>
+
+                        <div class="example-prompts">
+                            <span class="example-btn" data-target="feedback-input">"The new UI update is amazing, saved
+                                us hours!"</span>
+                            <span class="example-btn" data-target="feedback-input">"We need a dark mode feature
+                                ASAP."</span>
+                        </div>
+
+                        <button id="predict-sentiment-btn" class="primary-btn">
+                            <i class="fa-solid fa-microchip"></i> Run NLP Pipeline
+                        </button>
+                    </div>
+
+                    <!-- Output -->
+                    <div class="output-panel">
+                        <h3>NLP Classification</h3>
+                        <div id="sentiment-result" class="result-placeholder">
+                            <i class="fa-solid fa-language placeholder-icon"></i>
+                            <p>Awaiting text to run TF-IDF Logistic Regression...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with FastAPI, Scikit-Learn, and Vanilla JS.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
