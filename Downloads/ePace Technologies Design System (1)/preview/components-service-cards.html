@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#f8fafc;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .svc{background:#fff;border-radius:16px;padding:20px;border:1px solid #e2e8f0;position:relative;overflow:hidden;}
+  .svc::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#1a56db,#1347c0);}
+  .ico{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;}
+  .ico.purple{background:#ede9fe;}
+  .ico.teal{background:#ccfbf1;}
+  .svc h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;color:#0b1f3a;margin:0 0 6px;font-weight:700;}
+  .svc p{font-size:12.5px;color:#64748b;line-height:1.6;margin:0 0 10px;}
+  .arr{font-size:12px;font-weight:700;color:#1a56db;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="svc">
+    <div class="ico purple">🤖</div>
+    <h3>AI &amp; Machine Learning</h3>
+    <p>Generative AI, LLM integration, MLOps, Computer Vision and AI strategy.</p>
+    <div class="arr">Learn more →</div>
+  </div>
+  <div class="svc">
+    <div class="ico teal">👥</div>
+    <h3>IT Staffing Solutions</h3>
+    <p>Contract, contract-to-hire and direct placement of top IT professionals.</p>
+    <div class="arr">Learn more →</div>
+  </div>
+</div>
+</body>
+</html>

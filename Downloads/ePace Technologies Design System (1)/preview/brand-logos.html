@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .logo-card{border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;justify-content:center;min-height:100px;}
+  .dark{background:#0b1f3a;border-color:#0b1f3a;}
+  img{max-width:100%;height:auto;max-height:70px;display:block;}
+  .meta{font-family:var(--font-mono);font-size:10px;color:var(--fg3);margin-top:6px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div>
+    <div class="logo-card"><img src="../assets/logo.png" alt="ePace"/></div>
+    <div class="meta">logo.png · on light</div>
+  </div>
+  <div>
+    <div class="logo-card dark"><img src="../assets/logo-white.png" alt="ePace"/></div>
+    <div class="meta" style="color:#94a3b8;">logo-white.png · on navy</div>
+  </div>
+</div>
+</body>
+</html>

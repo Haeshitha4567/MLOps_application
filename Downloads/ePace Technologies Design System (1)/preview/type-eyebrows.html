@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:14px;}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+  .tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:50px;font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(26,86,219,0.2);}
+  .tag-blue{background:#dbeafe;color:#1347c0;}
+  .tag-teal{background:#e0f2fe;color:#0891b2;border-color:rgba(8,145,178,0.2);}
+  .tag-light{background:rgba(11,31,58,0.06);color:#0b1f3a;border-color:rgba(11,31,58,0.12);}
+  .dark{background:#0b1f3a;border-radius:10px;padding:14px;}
+  .tag-on-dark{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25);}
+  .h-ex{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-0.4px;}
+  .h-ex .accent{color:#1a56db;}
+  .h-dark{color:#fff;}
+  .h-dark .accent{color:#60a5fa;}
+  .meta{font-family:var(--font-mono);font-size:10px;color:var(--fg3);}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <span class="tag tag-blue">What We Do</span>
+    <span class="tag tag-teal">🤖 AI-Powered</span>
+    <span class="tag tag-light">Service 01</span>
+  </div>
+  <div class="dark">
+    <span class="tag tag-on-dark">• Now Hiring</span>
+  </div>
+  <div>
+    <div class="h-ex">Embracing the <span class="accent">AI Revolution</span></div>
+    <div class="meta" style="margin-top:6px;">Heading · blue accent span on light</div>
+  </div>
+  <div class="dark">
+    <div class="h-ex h-dark">Placing <span class="accent">People First</span></div>
+    <div class="meta" style="margin-top:6px;color:rgba(255,255,255,0.4);">Heading · sky accent span on dark</div>
+  </div>
+</div>
+</body>
+</html>

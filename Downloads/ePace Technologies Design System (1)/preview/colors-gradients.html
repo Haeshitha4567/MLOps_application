@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:20px 24px;}
+  .row{display:flex;gap:12px;flex-wrap:wrap;}
+  .g{flex:1;min-width:150px;height:110px;border-radius:16px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#fff;}
+  .g .name{font-size:12px;font-weight:700;}
+  .g .hex{font-family:var(--font-mono);font-size:10px;opacity:0.75;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="g" style="background:linear-gradient(135deg,#0b1f3a 0%,#1a3a6b 50%,#1a56db 100%);"><span class="name">Hero</span><span class="hex">navy → blue</span></div>
+    <div class="g" style="background:linear-gradient(135deg,#1a56db 0%,#1347c0 100%);"><span class="name">Blue</span><span class="hex">#1A56DB → #1347C0</span></div>
+    <div class="g" style="background:linear-gradient(135deg,#0b1f3a 0%,#102848 100%);"><span class="name">Dark</span><span class="hex">#0B1F3A → #102848</span></div>
+    <div class="g" style="background:linear-gradient(135deg,#0891b2 0%,#0e7490 100%);"><span class="name">Teal</span><span class="hex">#0891B2 → #0E7490</span></div>
+    <div class="g" style="background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%);"><span class="name">Accent</span><span class="hex">#F59E0B → #D97706</span></div>
+  </div>
+</div>
+</body>
+</html>

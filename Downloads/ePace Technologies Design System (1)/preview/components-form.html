@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .fg label{display:block;font-size:11px;font-weight:700;color:#334155;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px;}
+  .fg input,.fg select,.fg textarea{width:100%;padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:13.5px;color:#1e293b;background:#f8fafc;outline:none;font-family:inherit;box-sizing:border-box;}
+  .fg.focus input{border-color:#1a56db;background:#fff;box-shadow:0 0 0 4px rgba(26,86,219,0.08);}
+  .fg textarea{height:56px;resize:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="fg"><label>First Name *</label><input placeholder="John"/></div>
+  <div class="fg focus"><label>Email * (focused)</label><input value="john@company.com"/></div>
+  <div class="fg"><label>Interested in…</label><select><option>IT Staffing</option></select></div>
+  <div class="fg"><label>Message *</label><textarea placeholder="Tell us about your project…"></textarea></div>
+</div>
+</body>
+</html>

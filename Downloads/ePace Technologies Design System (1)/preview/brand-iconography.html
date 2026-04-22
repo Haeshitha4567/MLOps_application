@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:12px;}
+  .grp{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .grp .label{font-family:var(--font-mono);font-size:10px;color:var(--fg3);width:70px;flex-shrink:0;}
+  .emoji{font-size:24px;}
+  .flag{font-size:22px;}
+  .sq{width:36px;height:36px;border-radius:8px;background:rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .sq.grad{background:linear-gradient(135deg,#1a56db 0%,#1347c0 100%);color:#fff;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grp"><span class="label">Services</span><span class="emoji">💼</span><span class="emoji">🤖</span><span class="emoji">👥</span><span class="emoji">🌍</span><span class="emoji">☁️</span><span class="emoji">📊</span><span class="emoji">🛡️</span><span class="emoji">⚙️</span><span class="emoji">🎯</span></div>
+  <div class="grp"><span class="label">AI / Misc</span><span class="emoji">🧠</span><span class="emoji">📈</span><span class="emoji">🔬</span><span class="emoji">🏢</span><span class="emoji">🕐</span><span class="emoji">📍</span><span class="emoji">📞</span><span class="emoji">✉</span><span class="emoji">✓</span><span class="emoji">★</span></div>
+  <div class="grp"><span class="label">Flags</span><span class="flag">🇺🇸</span><span class="flag">🇮🇳</span><span class="flag">🇧🇷</span><span class="flag">🇦🇷</span><span class="flag">🇲🇽</span></div>
+  <div class="grp"><span class="label">In tiles</span><div class="sq grad">🤖</div><div class="sq" style="background:#dbeafe;">💼</div><div class="sq" style="background:#ccfbf1;">👥</div><div class="sq" style="background:#ede9fe;">🧠</div></div>
+</div>
+</body>
+</html>

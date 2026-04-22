@@ -1,0 +1,193 @@
+/* ============================================================
+   ePace Technologies — Design System Foundations
+   Imported from epacetech-website/css/style.css
+   ============================================================ */
+
+/* ---- FONTS (Google Fonts — used in production site) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ---- BRAND / CORE COLORS ---- */
+  --navy:        #0b1f3a;   /* Primary brand navy (logo, dark sections) */
+  --navy-mid:    #102848;
+  --navy-light:  #1a3a5c;
+  --blue:        #1a56db;   /* Primary action blue */
+  --blue-dark:   #1347c0;
+  --blue-light:  #dbeafe;   /* Tag / pill backgrounds */
+  --blue-sky:    #60a5fa;   /* Accent text on dark (hero highlight) */
+  --teal:        #0891b2;
+  --teal-light:  #e0f2fe;
+  --amber:       #f59e0b;   /* Logo orange stripes / warnings / stars */
+  --amber-dark:  #d97706;
+  --green:       #10b981;
+  --green-light: #d1fae5;
+
+  /* ---- NEUTRALS ---- */
+  --white:       #ffffff;
+  --off-white:   #f8fafc;
+  --gray-50:     #f8fafc;
+  --gray-100:    #f1f5f9;
+  --gray-200:    #e2e8f0;
+  --gray-300:    #cbd5e1;
+  --gray-400:    #94a3b8;
+  --gray-500:    #64748b;
+  --gray-600:    #475569;
+  --gray-700:    #334155;
+  --gray-800:    #1e293b;
+  --gray-900:    #0f172a;
+
+  /* ---- SEMANTIC FG/BG ---- */
+  --fg1:         #1e293b;   /* Primary text on light */
+  --fg2:         #64748b;   /* Secondary text on light */
+  --fg3:         #94a3b8;   /* Tertiary / meta */
+  --fg-on-dark-1: #ffffff;
+  --fg-on-dark-2: rgba(255,255,255,0.72);
+  --fg-on-dark-3: rgba(255,255,255,0.45);
+  --bg1:         #ffffff;
+  --bg2:         #f8fafc;   /* Alternating section bg */
+  --bg-dark:     #0b1f3a;
+
+  /* ---- SEMANTIC SERVICE-TILE PASTELS ---- */
+  --tile-blue:   #dbeafe;
+  --tile-purple: #ede9fe;
+  --tile-teal:   #ccfbf1;
+  --tile-indigo: #e0e7ff;
+  --tile-sky:    #e0f2fe;
+  --tile-amber:  #fef3c7;
+  --tile-rose:   #ffe4e6;
+  --tile-green:  #d1fae5;
+  --tile-orange: #ffedd5;
+
+  /* ---- GRADIENTS ---- */
+  --grad-hero:   linear-gradient(135deg, #0b1f3a 0%, #1a3a6b 50%, #1a56db 100%);
+  --grad-blue:   linear-gradient(135deg, #1a56db 0%, #1347c0 100%);
+  --grad-dark:   linear-gradient(135deg, #0b1f3a 0%, #102848 100%);
+  --grad-teal:   linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --grad-accent: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+
+  /* ---- SHADOWS ---- */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md:   0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg:   0 8px 40px rgba(0,0,0,0.12);
+  --shadow-xl:   0 20px 60px rgba(0,0,0,0.16);
+  --shadow-blue: 0 8px 32px rgba(26,86,219,0.28);
+
+  /* ---- RADII ---- */
+  --radius-sm:   6px;
+  --radius:      10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-pill: 50px;
+
+  /* ---- SPACING ---- */
+  --space-1:     4px;
+  --space-2:     8px;
+  --space-3:     12px;
+  --space-4:     16px;
+  --space-5:     20px;
+  --space-6:     24px;
+  --space-8:     32px;
+  --space-10:    40px;
+  --space-12:    48px;
+  --space-16:    64px;
+  --space-20:    80px;
+  --space-24:    90px;   /* Standard section vertical padding */
+
+  /* ---- TRANSITIONS ---- */
+  --t:           all 0.25s cubic-bezier(.4,0,.2,1);
+
+  /* ---- TYPE FAMILIES ---- */
+  --font-sans:    'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---- TYPE SCALE ---- */
+  --fs-hero:      3.2rem;  /* 51px — Homepage hero */
+  --fs-h1:        2.7rem;  /* 43px — Inner page header */
+  --fs-h2:        2.25rem; /* 36px — Section headings */
+  --fs-h3:        1.25rem;
+  --fs-h4:        1rem;
+  --fs-body-lg:   1.1rem;
+  --fs-body:      1rem;
+  --fs-small:     13.5px;
+  --fs-xs:        12px;
+  --fs-label:     11.5px;  /* Label/eyebrow tags */
+}
+
+/* ---- BASE TYPE RESETS ---- */
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--fg1);
+  line-height: 1.6;
+  background: var(--bg1);
+}
+
+/* ---- SEMANTIC TYPE CLASSES ---- */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--navy);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: var(--navy);
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--navy);
+}
+h4, .h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  color: var(--navy);
+}
+.display-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+p, .body {
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  color: var(--fg2);
+}
+.body-lg {
+  font-size: var(--fs-body-lg);
+  line-height: 1.8;
+  color: var(--fg2);
+}
+.small {
+  font-size: var(--fs-small);
+  color: var(--fg2);
+}
+.eyebrow, .label-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  border: 1px solid rgba(26,86,219,0.2);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
